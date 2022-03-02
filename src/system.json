@@ -1,0 +1,40 @@
+{
+  "name": "AvatarLegendsVTT",
+  "title": "Avatar Legends RPG",
+  "description": "This Foundry Virtual Tabletop system implements the Avatar Legends RPG",
+  "version": "This is auto replaced",
+  "author": "Matt Bennett",
+  "authors": [
+    {
+      "name": "Matt Bennett",
+      "discord": ""
+    }
+  ],
+  "minimumCoreVersion": "9",
+  "compatibleCoreVersion": "9",
+  "scripts": [],
+  "esmodules": ["module/AvatarLegendsVTT.js"],
+  "styles": ["styles/AvatarLegendsVTT.css"],
+  "packs": [],
+  "dependencies": [],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "socket": false,
+  "url": "This is auto replaced",
+  "manifest": "This is auto replaced",
+  "download": "This is auto replaced",
+  "license": "MIT",
+  "readme": "",
+  "bugs": "",
+  "changelog": "",
+  "initiative": "",
+  "gridDistance": 1,
+  "gridUnits": "",
+  "primaryTokenAttribute": "",
+  "secondaryTokenAttribute": ""
+}
