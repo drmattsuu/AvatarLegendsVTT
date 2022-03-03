@@ -1,10 +1,111 @@
 {
   "Actor": {
-    "types": [],
-    "templates": {}
+    "types": ["campaign", "player", "npc"],
+    "templates": {
+      "base": {
+        "name": "",
+        "description": ""
+      },
+      "stats": {
+        "creativity": {
+          "value": 0,
+          "min": -1,
+          "max": 3
+        },
+        "focus": {
+          "value": 0,
+          "min": -1,
+          "max": 3
+        },
+        "harmony": {
+          "value": 0,
+          "min": -1,
+          "max": 3
+        },
+        "passion": {
+          "value": 0,
+          "min": -1,
+          "max": 3
+        }
+      },
+      "resources": {
+        "fatigue": {},
+        "conditions": []
+      },
+      "principle": {
+        "value": 0,
+        "principle": ""
+      },
+      "principles": {
+        "value": 0,
+        "center": 0,
+        "xPrinciple": "",
+        "yPrinciple": ""
+      },
+      "details": {
+        "biography": "",
+        "demeanor": "",
+        "history": "",
+        "connections": "",
+        "notes": ""
+      },
+      "moves": [],
+      "techniques": []
+    },
+    "campaign": {
+      "templates": ["base"],
+      "era": "",
+      "scope": "",
+      "focus": {
+        "groupFocus": "",
+        "detail": ""
+      },
+      "incitingIncident": {
+        "act1": {
+          "act": "",
+          "detail": ""
+        },
+        "act2": {
+          "act": "",
+          "detail": ""
+        },
+        "act3": {
+          "act": "",
+          "detail": ""
+        }
+      },
+      "npcs": []
+    },
+    "player": {
+      "templates": ["base", "stats", "resources", "principles", "details", "moves", "techniques"]
+    },
+    "npc": {
+      "templates": ["base", "resources", "principle", "details", "techniques"]
+    }
   },
   "Item": {
-    "types": [],
-    "templates": {}
+    "types": ["move", "technique", "condition", "book"],
+    "templates": {
+      "base": {
+        "name": "",
+        "description": ""
+      }
+    },
+    "move": {
+      "templates": ["base"],
+      "type": ""
+    },
+    "technique": {
+      "templates": ["base"],
+      "type": "",
+      "rare": false
+    },
+    "condition": {
+      "templates": ["base"],
+      "positive": false
+    },
+    "book": {
+      "templates": ["base"]
+    }
   }
 }
