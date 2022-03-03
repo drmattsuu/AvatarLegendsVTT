@@ -1,3 +1,3 @@
-export function registerSettings(): void {
+export function RegisterSettings(): void {
   // Register any custom system settings here
 }

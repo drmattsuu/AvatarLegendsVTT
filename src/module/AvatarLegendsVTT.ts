@@ -11,8 +11,9 @@
  */
 
 // Import TypeScript modules
-import { registerSettings } from './settings';
-import { preloadTemplates } from './preloadTemplates';
+import { RegisterSettings } from './AlSettings';
+import { PreloadTemplates } from './AlTemplates';
+import { AlCampaignSheet } from './actor/ActorSheet';
 
 // Initialize system
 Hooks.once('init', async () => {
@@ -21,12 +22,13 @@ Hooks.once('init', async () => {
   // Assign custom classes and constants here
 
   // Register custom system settings
-  registerSettings();
+  RegisterSettings();
 
   // Preload Handlebars templates
-  await preloadTemplates();
+  await PreloadTemplates();
 
   // Register custom sheets (if any)
+  Actors.registerSheet('avatarLegends', AlCampaignSheet, { types: ['campaign'], makeDefault: true });
 });
 
 // Setup system

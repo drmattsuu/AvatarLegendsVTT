@@ -1,4 +1,14 @@
-/* ---------------------------- */
-/*             Sass             */
-/* This is your Sass entry file */
-/* ---------------------------- */
+.sheet-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 100%;
+
+  .actorsheet-header {
+    width: 100%;
+    order: 0;
+    margin-bottom: 10px;
+  }
+}
