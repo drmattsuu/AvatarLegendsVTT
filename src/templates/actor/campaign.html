@@ -1,7 +1,21 @@
-<form class="{{cssClass}}" autocomplete="off">
-    <div class="sheet-wrapper">
-        <header class="actorsheet-header">
-            <h1>{{actor.name}}</h1>
-        </header>
-    </div>
+<form class="{{cssClass}} {{actor.type}} flexcol" autocomplete="off">
+
+    {{!-- Sheet Header --}}
+    <header class="sheet-header">
+        <div class="header-fields">
+            <h1 class="groupName"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+
+            {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
+            use both the "grid" and "grid-Ncol" class where "N" can be any number
+            from 1 to 12 and will create that number of columns. --}}
+            <div class="resources grid grid-2col">
+                <div class="resource flex-group-center">
+                    
+                </div>
+                <div class="resource flex-group-center">
+
+                </div>
+            </div>
+        </div>
+    </header>
 </form>

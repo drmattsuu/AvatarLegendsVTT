@@ -4,12 +4,6 @@
   "description": "This Foundry Virtual Tabletop system implements the Avatar Legends RPG",
   "version": "This is auto replaced",
   "author": "Matt Bennett",
-  "authors": [
-    {
-      "name": "Matt Bennett",
-      "discord": ""
-    }
-  ],
   "minimumCoreVersion": "9",
   "compatibleCoreVersion": "9",
   "scripts": [],
@@ -29,12 +23,8 @@
   "manifest": "This is auto replaced",
   "download": "This is auto replaced",
   "license": "MIT",
-  "readme": "",
-  "bugs": "",
-  "changelog": "",
-  "initiative": "",
   "gridDistance": 1,
-  "gridUnits": "",
-  "primaryTokenAttribute": "",
-  "secondaryTokenAttribute": ""
+  "gridUnits": "m",
+  "primaryTokenAttribute": null,
+  "secondaryTokenAttribute": null
 }

@@ -1,25 +1,31 @@
 /**
- * This is your TypeScript entry file for Foundry VTT.
- * Register custom settings, sheets, and constants using the Foundry API.
- * Change this heading to be more descriptive to your system, or remove it.
- * Author: [your name]
- * Content License: [copyright and-or license] If using an existing system
- * 					you may want to put a (link to a) license or copyright
- * 					notice here (e.g. the OGL).
- * Software License: [your license] Put your desired license here, which
- * 					 determines how others may use and modify your system.
+ * Main entrypoint for the AvatarLegends system for Foundry Virtual Tabletop
+ * Author: Matthew Bennett
+ * Software License: MIT
  */
 
 // Import TypeScript modules
 import { RegisterSettings } from './AlSettings';
 import { PreloadTemplates } from './AlTemplates';
-import { AlCampaignSheet } from './actor/ActorSheet';
+import { AlCampaignSheet } from './sheets/ActorSheet';
+import { AlActor } from './documents/AlActor';
+
+declare global {
+  interface LenientGlobalVariableTypes {
+    AvatarLegends: object;
+  }
+}
 
 // Initialize system
 Hooks.once('init', async () => {
-  console.log('AvatarLegendsVTT | Initializing AvatarLegendsVTT');
+  console.log('AvatarLegendsVTT | Initializing AvatarLegends');
 
   // Assign custom classes and constants here
+  (game as LenientGlobalVariableTypes).AvatarLegends = {
+    AlActor,
+  };
+
+  CONFIG.Actor.documentClass = AlActor;
 
   // Register custom system settings
   RegisterSettings();
@@ -27,8 +33,9 @@ Hooks.once('init', async () => {
   // Preload Handlebars templates
   await PreloadTemplates();
 
-  // Register custom sheets (if any)
-  Actors.registerSheet('avatarLegends', AlCampaignSheet, { types: ['campaign'], makeDefault: true });
+  // Register custom sheets
+  Actors.unregisterSheet('core', ActorSheet);
+  Actors.registerSheet('AvatarLegends', AlCampaignSheet, { types: ['campaign'], makeDefault: true });
 });
 
 // Setup system

@@ -49,8 +49,12 @@
         "connections": "",
         "notes": ""
       },
-      "moves": [],
-      "techniques": []
+      "moves": {
+        "moves": []
+      },
+      "techniques": {
+        "techniques": []
+      }
     },
     "campaign": {
       "templates": ["base"],
