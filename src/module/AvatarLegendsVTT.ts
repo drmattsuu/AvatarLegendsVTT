@@ -34,7 +34,9 @@ Hooks.once('init', async () => {
   await PreloadTemplates();
 
   // Register custom sheets
-  Actors.unregisterSheet('core', ActorSheet);
+  // Fallback onto the defaults for now,
+  // todo (mb) : uncomment this line when all sheets are made
+  // Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('AvatarLegends', AlCampaignSheet, { types: ['campaign'], makeDefault: true });
 });
 

@@ -65,6 +65,7 @@
         "detail": ""
       },
       "incitingIncident": {
+        "location": "",
         "act1": {
           "act": "",
           "detail": ""
@@ -84,7 +85,8 @@
       "templates": ["base", "stats", "resources", "principles", "details", "moves", "techniques"]
     },
     "npc": {
-      "templates": ["base", "resources", "principle", "details", "techniques"]
+      "templates": ["base", "resources", "principle", "details", "techniques"],
+      "relationship": ""
     }
   },
   "Item": {

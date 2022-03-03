@@ -1,0 +1,14 @@
+<ol class="actor-list">
+    <li class="actor flexrow actors-header">
+        <div class="actor-name">{{localize 'ALVTT.Common.Name'}}</div>
+        <div class="actor-name">{{localize 'ALVTT.Sheets.Campaign.NpcRelationship'}}</div>
+        <!-- todo : add actor delete and actor open control? -->
+        <!-- <div class="actor-controls">
+            <a class="actor-control actor-create" title="{{localize 'ALVTT.Sheets.Campaign.AddNpc'}}"
+                data-type="actor"><i class="fas fa-plus"></i>{{localize 'ALVTT.Sheets.Campaign.AddNpc'}}</a>
+        </div> -->
+    </li>
+    {{#each data.data.npcs}}
+    <li>{{this}}</li>
+    {{/each}}
+</ol>

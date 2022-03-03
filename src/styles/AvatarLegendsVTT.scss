@@ -14,6 +14,7 @@
 
 // styles limited to ALVTT sheets
 .avatarlegends {
+  @import 'components/actors';
   @import 'components/forms';
   @import 'components/resource';
   @import 'components/items';

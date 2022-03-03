@@ -54,6 +54,7 @@ export interface CampaignData extends Base {
   scope: string;
   focus: { groupFocus: string; detail: string };
   incitingIncident: {
+    location: string;
     act1: {
       act: string;
       detail: string;
@@ -67,8 +68,11 @@ export interface CampaignData extends Base {
       detail: string;
     };
   };
+  npcs: string[];
 }
 
 export interface PlayerData extends Base, Stats, Resources, Principles, Details, Moves, Techniques {}
 
-export interface NpcData extends Base, Resources, Principle, Details, Techniques {}
+export interface NpcData extends Base, Resources, Principle, Details, Techniques {
+  relationship: string;
+}

@@ -22,4 +22,10 @@ export class AlActorSheet extends ActorSheet {
  * todo : docs
  * @extends {AlActorSheet}
  */
-export class AlCampaignSheet extends AlActorSheet {}
+export class AlCampaignSheet extends AlActorSheet {
+  override activateListeners(html: JQuery<HTMLElement>): void {
+    super.activateListeners(html);
+
+    console.log('activateListeners');
+  }
+}

@@ -3,19 +3,55 @@
     {{!-- Sheet Header --}}
     <header class="sheet-header">
         <div class="header-fields">
-            <h1 class="groupName"><input name="name" type="text" value="{{actor.name}}" placeholder="Name" /></h1>
+            <h1 class="groupName">{{localize 'ALVTT.Sheets.Campaign.Title'}}</h1>
+            <div class="team flex-group-left">
+                <label for="name">{{localize 'ALVTT.Sheets.Campaign.TeamName'}}:</label>
+                <input name="name" id="name" type="text" value="{{actor.name}}" placeholder="Name" />
+            </div>
 
-            {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-            use both the "grid" and "grid-Ncol" class where "N" can be any number
-            from 1 to 12 and will create that number of columns. --}}
-            <div class="resources grid grid-2col">
-                <div class="resource flex-group-center">
-                    
+            <div class="campaign grid grid-2col">
+                <div class="campaign flex-group-center">
+                    <label for="data.era">{{localize 'ALVTT.Sheets.Campaign.Era'}}</label>
+                    <input list="eras" id="data.era" type="text" name="data.era" value="{{data.data.era}}" />
+                    <datalist id="eras">
+                        <option value="{{localize 'ALVTT.Eras.Kyoshi'}}">
+                        <option value="{{localize 'ALVTT.Eras.Roku'}}">
+                        <option value="{{localize 'ALVTT.Eras.War'}}">
+                        <option value="{{localize 'ALVTT.Eras.Aang'}}">
+                        <option value="{{localize 'ALVTT.Eras.Korra'}}">
+                    </datalist>
                 </div>
-                <div class="resource flex-group-center">
-
+                <div class="campaign flex-group-center">
+                    <label for="scope">{{localize 'ALVTT.Sheets.Campaign.Scope'}}</label>
+                    <input name="data.scope" id="data.scope" type="text" value="{{data.data.scope}}" />
                 </div>
             </div>
         </div>
     </header>
+
+    {{!-- Sheet Tab Navigation --}}
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="focus">{{localize 'ALVTT.Sheets.Campaign.focus'}}</a>
+        <a class="item" data-tab="backstory">{{localize 'ALVTT.Sheets.Campaign.backstory'}}</a>
+        <a class="item" data-tab="npcs">{{localize 'ALVTT.Sheets.Campaign.Npcs'}}</a>
+    </nav>
+
+    {{!-- Sheet Body --}}
+    <section class="sheet-body">
+
+        {{!-- Focus Tab --}}
+        <div class="tab focus" data-group="primary" data-tab="focus">
+            Focus TBD
+        </div>
+
+        <div class="tab backstory" data-group="primary" data-tab="backstory">
+            Backstory TBD
+        </div>
+
+        {{!-- Npcs Tab --}}
+        <div class="tab npcs" data-group="primary" data-tab="npcs">
+            {{> "systems/AvatarLegendsVTT/templates/actor/parts/npcs.html"}}
+        </div>
+
+    </section>
 </form>

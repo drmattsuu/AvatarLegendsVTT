@@ -1,1 +1,17 @@
-{}
+{
+  "ALVTT.Common.Name": "Name",
+  "ALVTT.Sheets.Campaign.Title": "Campaign Worksheet",
+  "ALVTT.Sheets.Campaign.TeamName": "Team/Campaign Name",
+  "ALVTT.Sheets.Campaign.Era": "Era",
+  "ALVTT.Sheets.Campaign.Scope": "Scope",
+  "ALVTT.Sheets.Campaign.focus": "Group Focus",
+  "ALVTT.Sheets.Campaign.backstory": "Inciting Incident",
+  "ALVTT.Sheets.Campaign.Npcs": "Allies and Enemies",
+  "ALVTT.Sheets.Campaign.AddNpc": "Add NPC",
+  "ALVTT.Sheets.Campaign.NpcRelationship": "Relationship",
+  "ALVTT.Eras.Kyoshi": "Kyoshi Era",
+  "ALVTT.Eras.Roku": "Roku Era",
+  "ALVTT.Eras.War": "Hundred Year War",
+  "ALVTT.Eras.Aang": "Aang Era",
+  "ALVTT.Eras.Korra": "Korra Era"
+}
