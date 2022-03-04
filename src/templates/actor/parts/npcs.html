@@ -1,14 +1,21 @@
-<ol class="actor-list">
+<ol class="actor-list" id="npc-list">
     <li class="actor flexrow actors-header">
         <div class="actor-name">{{localize 'ALVTT.Common.Name'}}</div>
         <div class="actor-name">{{localize 'ALVTT.Sheets.Campaign.NpcRelationship'}}</div>
-        <!-- todo : add actor delete and actor open control? -->
-        <!-- <div class="actor-controls">
-            <a class="actor-control actor-create" title="{{localize 'ALVTT.Sheets.Campaign.AddNpc'}}"
-                data-type="actor"><i class="fas fa-plus"></i>{{localize 'ALVTT.Sheets.Campaign.AddNpc'}}</a>
-        </div> -->
+        <!-- Control column for open/delete buttons -->
+        <div class="actor-controls"></div>
     </li>
+    <!-- To be injected with dynamic data -->
     {{#each data.data.npcs}}
-    <li>{{this}}</li>
+    <li class="actor flexrow {{this}}" id="{{this}}">
+        <div class="actor-name npc-name" id="npc-name"></div>
+        <div class="actor-name npc-rel" id="npc-relationship"></div>
+        <div class="actor-controls">
+            <a class="actor-control actor-edit" title="{{localize 'ALVTT.Sheets.Common.EditNPC'}}"><i
+                    class="fas fa-edit"></i></a>
+            <a class="actor-control actor-delete" title="{{localize 'ALVTT.Sheets.Common.RemoveNPC'}}"><i
+                    class="fas fa-trash"></i></a>
+        </div>
+    </li>
     {{/each}}
 </ol>

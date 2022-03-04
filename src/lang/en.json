@@ -1,5 +1,7 @@
 {
   "ALVTT.Common.Name": "Name",
+  "ALVTT.Sheets.Common.EditNPC": "Edit NPC",
+  "ALVTT.Sheets.Common.RemoveNPC": "Remove NPC",
   "ALVTT.Sheets.Campaign.Title": "Campaign Worksheet",
   "ALVTT.Sheets.Campaign.TeamName": "Team/Campaign Name",
   "ALVTT.Sheets.Campaign.Era": "Era",

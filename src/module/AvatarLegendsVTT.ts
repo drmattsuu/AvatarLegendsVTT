@@ -11,7 +11,7 @@ import { AlCampaignSheet } from './sheets/ActorSheet';
 import { AlActor } from './documents/AlActor';
 
 declare global {
-  interface LenientGlobalVariableTypes {
+  interface ALVTTGlobalGameTypes {
     AvatarLegends: object;
   }
 }
@@ -21,7 +21,7 @@ Hooks.once('init', async () => {
   console.log('AvatarLegendsVTT | Initializing AvatarLegends');
 
   // Assign custom classes and constants here
-  (game as LenientGlobalVariableTypes).AvatarLegends = {
+  (game as ALVTTGlobalGameTypes).AvatarLegends = {
     AlActor,
   };
 
