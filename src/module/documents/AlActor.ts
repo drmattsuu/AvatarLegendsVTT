@@ -32,9 +32,7 @@ export class AlActor extends Actor {
     }
 
     const data = actorData.data as CampaignData;
-    // if (!data.name)
     data.name = actorData.name;
-    console.log(data);
   }
 
   /**
@@ -46,7 +44,6 @@ export class AlActor extends Actor {
     const data = super.getRollData();
 
     // todo (mb): prep roll data for characters and npcs
-    console.log(data);
     return data;
   }
 }

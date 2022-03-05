@@ -38,6 +38,8 @@ Hooks.once('init', async () => {
   // todo (mb) : uncomment this line when all sheets are made
   // Actors.unregisterSheet('core', ActorSheet);
   Actors.registerSheet('AvatarLegends', AlCampaignSheet, { types: ['campaign'], makeDefault: true });
+  // todo (mb) : concomment this line when all item sheets are made
+  // Items.unregisterSheet("core", ItemSheet);
 });
 
 // Setup system
